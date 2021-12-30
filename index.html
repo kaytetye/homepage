@@ -5,20 +5,19 @@
     <!-- Milligram CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
     <style>
-        body {background: darkorange}
-        section {
-            display: grid;
-            align-items: stretch;
-            width: 100vw;
-            height: 100vh;
+        body {
+            background: #e8d4ba;
         }
-        .grid-item {
-            display: grid;
-            align-items: center;
-            justify-content: center;
+        section {
+            width: 80%;
+            margin: 2em auto;
+        }
+        article {
+            margin-bottom: 2em;
         }
         .title {
-            font-weight: bold
+            font-weight: bold;
+            margin: 0;
         }
         a {
             color: black;
@@ -28,17 +27,14 @@
 </head>
 <body>
 <section>
-<div class="grid-item">
-    <a href="https://thangkerne.kaytetye.com.au">
-        <span class="title">Thangkerne</span> Kaytetye birds
-    </a>
-</div>
-<div class="grid-item">
-    <a href="https://kenhale.kaytetye.com.au">
-        <span class="title">Angke</span>
-        Kaytetye recorded in 1959 by Professor Ken Hale
-    </a>
-</div>
+        <article>
+            <p class="title"><a href="https://thangkerne.kaytetye.com.au">Thangkerne</a></p>
+            Kaytetye birds
+        </article>
+        <article>
+            <p class="title"><a href="https://kenhale.kaytetye.com.au">Angke</a></p>
+            Kaytetye recorded in 1959 by Professor Ken Hale
+        </article>
 </section>
 </body>
 </html>
