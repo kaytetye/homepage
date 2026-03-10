@@ -67,17 +67,16 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: min(100%, 448px);
         }
 
         .ikwe-image-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 24rem;
-            height: 24rem;
+            display: block;
+            width: 100%;
             padding: 0.35rem;
             border: 1px solid #d8d0c3;
             background-color: #fff;
+            box-sizing: border-box;
             text-decoration: none;
             box-shadow: 0 0 0 0 rgba(71, 51, 28, 0.18);
             transition: transform 0.15s ease, box-shadow 0.15s ease;
@@ -97,8 +96,7 @@
         .ikwe-image-link img {
             display: block;
             width: 100%;
-            height: 100%;
-            object-fit: contain;
+            height: auto;
             cursor: zoom-in;
         }
 
@@ -160,13 +158,6 @@
             font-size: 1.5rem;
             line-height: 1;
             cursor: pointer;
-        }
-
-        @media screen and (max-width: 40em) {
-            .ikwe-image-link {
-                width: min(100%, 18rem);
-                height: min(calc(100vw - 4rem), 18rem);
-            }
         }
 
     </style>
@@ -331,13 +322,13 @@
             <div class="ikwe-gallery">
                 <figure class="ikwe-figure">
                     <a class="ikwe-image-link" href="ikwe/ikwe-board-game.png" data-lightbox-image="ikwe/ikwe-board-game.png" data-lightbox-alt="Ikwe board game artwork" aria-label="Open larger image">
-                        <img src="ikwe/ikwe-board-game.png" alt="Ikwe board game artwork" width="384" height="384">
+                        <img src="ikwe/ikwe-board-game.png" alt="Ikwe board game artwork" width="448" height="466">
                     </a>
                     <figcaption class="ikwe-image-caption">Click to enlarge</figcaption>
                 </figure>
                 <figure class="ikwe-figure">
                     <a class="ikwe-image-link" href="ikwe/ikwe-skin-names-diagram.jpg" data-lightbox-image="ikwe/ikwe-skin-names-diagram.jpg" data-lightbox-alt="Kaytetye skin names diagram used in the Ikwe game" aria-label="Open larger image">
-                        <img src="ikwe/ikwe-skin-names-diagram.jpg" alt="Kaytetye skin names diagram used in the Ikwe game" width="384" height="384">
+                        <img src="ikwe/ikwe-skin-names-diagram.jpg" alt="Kaytetye skin names diagram used in the Ikwe game" width="448" height="450">
                     </a>
                     <figcaption class="ikwe-image-caption">Click to enlarge</figcaption>
                 </figure>
