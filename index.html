@@ -42,6 +42,133 @@
             color: black;
             font-weight: bold;
         }
+
+        .ikwe-section {
+            padding: 0;
+            border: 0;
+            background: transparent;
+        }
+
+        .ikwe-audio-player {
+            display: block;
+            width: min(100%, 34rem);
+            margin: 1rem 0 1.5rem;
+        }
+
+        .ikwe-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            align-items: flex-start;
+        }
+
+        .ikwe-figure {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .ikwe-image-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24rem;
+            height: 24rem;
+            padding: 0.35rem;
+            border: 1px solid #d8d0c3;
+            background-color: #fff;
+            text-decoration: none;
+            box-shadow: 0 0 0 0 rgba(71, 51, 28, 0.18);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .ikwe-image-link:hover,
+        .ikwe-image-link:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 0.4rem 1.2rem rgba(71, 51, 28, 0.18);
+        }
+
+        .ikwe-image-link:focus {
+            outline: 2px solid #5a3d1f;
+            outline-offset: 3px;
+        }
+
+        .ikwe-image-link img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            cursor: zoom-in;
+        }
+
+        .ikwe-image-caption {
+            margin-top: 0.45rem;
+            color: #a7a7a7;
+            font-size: 0.72rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .ikwe-dialog {
+            position: fixed;
+            inset: 0;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            width: 100vw;
+            height: 100vh;
+            max-width: none;
+            max-height: none;
+            overflow: hidden;
+        }
+
+        .ikwe-dialog[open] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ikwe-dialog::backdrop {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .ikwe-dialog-image {
+            display: block;
+            width: auto;
+            height: auto;
+            max-width: calc(100vw - 2rem);
+            max-height: calc(100vh - 2rem);
+            border: 4px solid #fff;
+            background-color: #fff;
+            object-fit: contain;
+        }
+
+        .ikwe-dialog-close {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            border: 0;
+            width: 2.25rem;
+            height: 2.25rem;
+            padding: 0;
+            border-radius: 999px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            font-size: 1.5rem;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 40em) {
+            .ikwe-image-link {
+                width: min(100%, 18rem);
+                height: min(calc(100vw - 4rem), 18rem);
+            }
+        }
+
     </style>
 </head>
 
@@ -70,6 +197,7 @@
             <p class="title"><a href="https://angke.kaytetye.com.au" target="_blank">Angke</a> (Language)</p>
             Kaytetye audio recordings of words, phrases and stories.
         </article>
+
         <article>
             <p class="title"><a href="https://www.indigemoji.com.au/ayeye-akerte-about#comp-leqnxtr9"
                     target="_blank">Kaytetye Emoji</a>
@@ -192,7 +320,111 @@
             <p class="title"><a href="/definitions.html" target="_blank">Kaytetye Definitions by Kwementyaye
                     A.N.Ross</a></p>
         </article>
+        <article class="ikwe-section">
+            <p class="title">Ikwe ‘Kaytetye skin names’</p>
+            <p>Ikwe is a board game for learning the Kaytetye words for different skin groups (ikwe), and practicing your knowledge of relatives (altye), places (apmere) and Dreamings (aknganentye or altyerre) based on their skin group. Ikwe can be borrowed from the Batchelor library. It is best played in intergenerational groups.</p>
+            <p>Listen to the pronunciation of the Kaytetye skin names, and other words used in the game ikwe here.</p>
+            <audio class="ikwe-audio-player" controls preload="none">
+                <source src="ikwe/ikwe-kaytetye-skin-names.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="ikwe-gallery">
+                <figure class="ikwe-figure">
+                    <a class="ikwe-image-link" href="ikwe/ikwe-board-game.png" data-lightbox-image="ikwe/ikwe-board-game.png" data-lightbox-alt="Ikwe board game artwork" aria-label="Open larger image">
+                        <img src="ikwe/ikwe-board-game.png" alt="Ikwe board game artwork" width="384" height="384">
+                    </a>
+                    <figcaption class="ikwe-image-caption">Click to enlarge</figcaption>
+                </figure>
+                <figure class="ikwe-figure">
+                    <a class="ikwe-image-link" href="ikwe/ikwe-skin-names-diagram.jpg" data-lightbox-image="ikwe/ikwe-skin-names-diagram.jpg" data-lightbox-alt="Kaytetye skin names diagram used in the Ikwe game" aria-label="Open larger image">
+                        <img src="ikwe/ikwe-skin-names-diagram.jpg" alt="Kaytetye skin names diagram used in the Ikwe game" width="384" height="384">
+                    </a>
+                    <figcaption class="ikwe-image-caption">Click to enlarge</figcaption>
+                </figure>
+            </div>
+            <dialog class="ikwe-dialog">
+                <button type="button" class="ikwe-dialog-close" aria-label="Close image">&times;</button>
+                <img class="ikwe-dialog-image" src="" alt="">
+            </dialog>
+        </article>
     </section>
+
+    <script>
+        (function () {
+            var sizeIkweDialogImage = function (dialogImage) {
+                if (!dialogImage || !dialogImage.naturalWidth || !dialogImage.naturalHeight) return;
+
+                var maxWidth = Math.max(window.innerWidth - 32, 0);
+                var maxHeight = Math.max(window.innerHeight - 32, 0);
+                var scale = Math.min(
+                    maxWidth / dialogImage.naturalWidth,
+                    maxHeight / dialogImage.naturalHeight,
+                    1
+                );
+
+                dialogImage.style.width = Math.floor(dialogImage.naturalWidth * scale) + 'px';
+                dialogImage.style.height = Math.floor(dialogImage.naturalHeight * scale) + 'px';
+            };
+
+            var openIkweDialog = function (dialog, dialogImage, imageLink) {
+                if (!dialog || !dialogImage || !imageLink) return;
+
+                dialogImage.onload = function () {
+                    sizeIkweDialogImage(dialogImage);
+                };
+
+                dialogImage.src = imageLink.getAttribute('data-lightbox-image');
+                dialogImage.alt = imageLink.getAttribute('data-lightbox-alt') || '';
+                dialog.showModal();
+
+                if (dialogImage.complete) {
+                    sizeIkweDialogImage(dialogImage);
+                }
+            };
+
+            document.addEventListener('click', function (event) {
+                var imageLink = event.target.closest('.ikwe-image-link');
+                if (imageLink !== null) {
+                    var section = imageLink.closest('.ikwe-section');
+                    var dialog = section && section.querySelector('.ikwe-dialog');
+                    var dialogImage = dialog && dialog.querySelector('.ikwe-dialog-image');
+
+                    if (dialog && dialogImage && typeof dialog.showModal === 'function') {
+                        event.preventDefault();
+                        openIkweDialog(dialog, dialogImage, imageLink);
+                    }
+                    return;
+                }
+
+                var closeButton = event.target.closest('.ikwe-dialog-close');
+                if (closeButton !== null) {
+                    var dialogToClose = closeButton.closest('.ikwe-dialog');
+                    if (dialogToClose) dialogToClose.close();
+                    return;
+                }
+
+                var dialogBackdrop = event.target.closest('.ikwe-dialog');
+                if (dialogBackdrop !== null && event.target === dialogBackdrop) {
+                    dialogBackdrop.close();
+                }
+            });
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    document.querySelectorAll('.ikwe-dialog[open]').forEach(function (dialog) {
+                        dialog.close();
+                    });
+                }
+            });
+
+            window.addEventListener('resize', function () {
+                document.querySelectorAll('.ikwe-dialog[open] .ikwe-dialog-image').forEach(function (dialogImage) {
+                    sizeIkweDialogImage(dialogImage);
+                });
+            });
+        })();
+    </script>
+
 </body>
 
 </html>
